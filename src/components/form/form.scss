@@ -17,6 +17,7 @@ form {
 				& span.action{
 					color: color($colors,dark) !important;
 					border-bottom: 1px solid !important;
+					cursor: pointer;
 				}
 			}
 		}

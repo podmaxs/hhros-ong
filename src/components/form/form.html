@@ -9,6 +9,7 @@
 					<ion-item *ngFor="let it of seed.inputs">
 						<ion-label floating>{{it.placeholder}}</ion-label>
 						<ion-input [(ngModel)]="it.value" [type]="it.type"></ion-input>
+						<small *ngIf="it.error && seed.error">{{it.log}}</small>
 					</ion-item>
 					<div margin-top text-center>
 						<button ion-button *ngFor="let bt of seed.buttons" (click)="action(bt)">

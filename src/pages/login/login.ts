@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { formGroupItem } from '../../implements/seeds/formGroupItem';
+import { formGroupItem }                       from '../../implements/seeds/formGroupItem';
 
-import { formItem }      from '../../implements/seeds/formItem';
+import { formItem }                            from '../../implements/seeds/formItem';
 
-import { buttonItem }    from '../../implements/seeds/buttonItem';
+import { buttonItem }                          from '../../implements/seeds/buttonItem';
+
+import { Forgot }                              from '../../pages/forgot/forgot';
+
+import { Signup }                              from '../../pages/signup/signup';
 
 
 @IonicPage()
@@ -33,10 +37,10 @@ export class Login {
 
   	//actions
   	let forgot:buttonItem = new buttonItem('Olvidaste tu password ?','danger',()=>{
-  		console.log('in your face');
+  		this.navCtrl.push(Forgot);
   	});
   	let signup:buttonItem = new buttonItem('Eres nuevo? Crea tu cuenta aqui.','danger',()=>{
-  		console.log('in your face');
+  	    this.navCtrl.push(Signup);
   	});
 
   	actions.push(forgot);
@@ -54,7 +58,7 @@ export class Login {
    		inputList,
    		buttons,
    		actions
-	);
+	  );
   }
 
   ionViewDidLoad() {

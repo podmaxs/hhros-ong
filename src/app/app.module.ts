@@ -16,7 +16,9 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
   //Pages
   import { Login}       from '../pages/login/login';
-
+  import { Forgot }     from '../pages/forgot/forgot';
+  import { Signup }     from '../pages/signup/signup';
+  
 
   //Components
   import { Form } from '../components/form/form';
@@ -32,7 +34,9 @@ import { HttpModule, JsonpModule } from '@angular/http';
     ContactPage,
     HomePage,
     Login,
-    Form
+    Form,
+    Forgot,
+    Signup
   ],
   imports: [
     HttpModule,
@@ -46,7 +50,9 @@ import { HttpModule, JsonpModule } from '@angular/http';
     AboutPage,
     ContactPage,
     HomePage,
-    Login
+    Login,
+    Forgot,
+    Signup
   ],
   providers: [
     StatusBar,
