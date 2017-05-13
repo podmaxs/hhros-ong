@@ -1,0 +1,26 @@
+<div text-center>
+	<ion-row text-center>
+		<ion-col col-lg-4   col-md-2 text-center color="secondary">
+			<ion-card>
+				<ion-card-header>
+					{{seed.title}}
+				</ion-card-header>
+				<ion-card-content padding-bottom>
+					<ion-item *ngFor="let it of seed.inputs">
+						<ion-label floating>{{it.placeholder}}</ion-label>
+						<ion-input [(ngModel)]="it.value" [type]="it.type"></ion-input>
+					</ion-item>
+					<div margin-top text-center>
+						<button ion-button *ngFor="let bt of seed.buttons" (click)="action(bt)">
+							{{bt.label}}
+						</button>
+					</div>
+					<div margin-top text-center *ngFor="let ac of seed.actions">
+						<span class="action" (click)="action(ac)">{{ac.label}}</span>
+					</div>
+				</ion-card-content>
+			</ion-card>
+			
+		</ion-col>
+	</ion-row>
+</div>
