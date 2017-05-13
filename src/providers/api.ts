@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, RequestOptions, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -11,7 +11,10 @@ export class Api {
   	private request(path:string = "",method:string = "get",body:any = {},headers:any = {}){
   		return new Promise(( resolve, reject) => {
   			console.log(this.serve+path,method);
-  			this.http[method](this.serve+path,body)
+        headers['Content-type'] = 'application/json';
+        let h                   = new Headers(headers);
+        let options             = new RequestOptions({ 'headers': h });
+  			this.http[method](this.serve+path,body,options)
   			.map((resp) => {return resp.json;})
   			.subscribe(
   				resp => {
