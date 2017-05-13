@@ -9,13 +9,25 @@
 		<ion-row>
 			<ion-col col-lg-4 col-md-6 col-sm *ngFor="let campaign of campaigns" (click)="campaignDetail(campaign)">
 				<ion-card>
-					<img [src]="campaign.image"/>
+					<ion-item>
+						<ion-avatar item-left>
+							<img [src]="campaign.image"/>
+						</ion-avatar>
+						<h2>Marty McFly</h2>
+					</ion-item>
+					<img src="http://lorempixel.com/400/200/?v=1"/>
 					<ion-card-header>
 						{{ campaign.title }}
 					</ion-card-header>
 					<ion-card-content>
 						{{ campaign.detail }}
 					</ion-card-content>
+					<ion-item>
+						<button ion-button icon-left clear item-right>
+						<ion-icon name="hand"></ion-icon>
+						yo sumo
+						</button>
+					</ion-item>
 				</ion-card>
 			</ion-col>
 		</ion-row>
