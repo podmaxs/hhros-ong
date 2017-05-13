@@ -8,18 +8,18 @@
 	<ion-list>
 		<ion-item>
 			<ion-label floating>Título</ion-label>
-			<ion-input type="text"></ion-input>
+			<ion-input type="text" [(ngModel)]="campaign.titulo"></ion-input>
 		</ion-item>
 		<ion-item>
-			<ion-label floating>Detalle</ion-label>
-			<ion-input type="text"></ion-input>
+			<ion-label floating>Descripción</ion-label>
+			<ion-input type="text" [(ngModel)]="campaign.descripcion"></ion-input>
 		</ion-item>
 		<ion-item>
 			<ion-label floating>Imagen</ion-label>
-			<ion-input type="text"></ion-input>
+			<ion-input type="text" [(ngModel)]="campaign.imagen"></ion-input>
 		</ion-item>
 	</ion-list>
 
-	<button ion-button block>Guardar</button>
+	<button ion-button block (click)="campaignAdd()">Guardar</button>
 
 </ion-content>
