@@ -15,7 +15,7 @@ form {
 					background-color: rgba(color($colors,primary),.1) !important;
 					padding-right: 16px !important;
 					&:last-child{
-						padding-bottom: 16px;
+						padding-bottom: 16px !important;
 					}
 				}
 				& span.action{

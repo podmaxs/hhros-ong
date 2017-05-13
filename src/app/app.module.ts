@@ -26,6 +26,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
   //Providers
   import { Api }  from '../providers/api';
+  import { SessionProvider } from '../providers/session-provider';
   
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
     StatusBar,
     SplashScreen,
     Api,
+    SessionProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

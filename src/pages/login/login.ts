@@ -11,6 +11,8 @@ import { Forgot }                              from '../../pages/forgot/forgot';
 
 import { Signup }                              from '../../pages/signup/signup';
 
+import { SessionProvider }                     from '../../providers/session-provider';
+
 
 @IonicPage()
 @Component({
@@ -20,7 +22,7 @@ import { Signup }                              from '../../pages/signup/signup';
 export class Login {
 	public seed:formGroupItem = new formGroupItem();
   	
-  	constructor(public navCtrl: NavController, public navParams: NavParams) {
+  	constructor(public session:SessionProvider, public navCtrl: NavController, public navParams: NavParams) {
   	
   	let buttons:Array<buttonItem>    = [];
   	let actions:Array<buttonItem>    = [];
@@ -32,7 +34,7 @@ export class Login {
   	
   	//buttons
   	let login:buttonItem = new buttonItem('Login','danger',()=>{
-  		console.log('In your face');
+  		this.open();
   	});
 
   	//actions
@@ -61,6 +63,19 @@ export class Login {
 	  );
   }
 
+  open(){
+    let form = this.seed.get();
+    console.log(form);
+    this.session.login(form['email'],form['password'])
+    .then(
+      me => {
+        console.log(me);
+      },
+      error =>{
+        console.log(error);
+      }
+    )
+  }
   ionViewDidLoad() {
   }
 

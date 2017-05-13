@@ -13,5 +13,6 @@ export class formGroupItem {
 			if(!this.error)
 				this.error = this.inputs[l].error;
 		}
+		return list;
 	}
 }

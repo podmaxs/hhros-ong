@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class Api {
-	public serve:string = "http://miserver.com/";
+	public serve:string = "http://192.168.0.31/hhrosario/api/";
 
   	constructor(public http: Http) {}
 
@@ -26,7 +26,7 @@ export class Api {
 
   	public get(path:string = "",body:any = {}){
   		return new Promise(( resolve, reject) => {
-  			this.request(path,'GET',body)
+  			this.request(path,'get',body)
   			.then(
   				data =>{
   					reject(data);
