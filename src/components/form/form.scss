@@ -13,10 +13,14 @@ form {
 			& ion-card-content{
 				& ion-item{
 					background-color: rgba(color($colors,primary),.1) !important;
+					padding-right: 16px !important;
+					&:last-child{
+						padding-bottom: 16px;
+					}
 				}
 				& span.action{
 					color: color($colors,dark) !important;
-					border-bottom: 1px solid !important;
+					border-bottom: 1px dashed !important;
 					cursor: pointer;
 				}
 			}
