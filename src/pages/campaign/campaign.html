@@ -5,8 +5,28 @@
 </ion-header>
 
 <ion-content padding>
-	<img [src]="campaign.image"/>
-	<p>
-		{{ campaign.detail }}
-	</p>
+	<ion-grid>
+  		<ion-row>
+    		<ion-col col-9>
+				<img [src]="campaign.image"/>
+				<p>
+					{{ campaign.detail }}
+				</p>
+			</ion-col>
+			<ion-col col-3 class="causasAsociadas" padding>
+				<h3>LA causa</h3>
+				<p>
+					Nombre de la causa
+				</p>
+				<h3>Otras Campañas</h3>
+				<ion-list>
+					<ion-item>
+						<ion-icon small name="heart" item-left></ion-icon>
+						Otra campaña
+					</ion-item>
+				</ion-list>
+      		</ion-col>
+		</ion-row>
+	</ion-grid>
 </ion-content>
+

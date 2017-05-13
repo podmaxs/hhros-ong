@@ -1,3 +1,14 @@
 page-home {
+    @import url('https://fonts.googleapis.com/css?family=Abel|Coming+Soon');
 
+    .toolbar-background-md {
+        border-color: #604848;
+        background: #604848;
+    }
+    .toolbar-title-md{
+        color: #F0F0D8;
+    }
+    .toolbar-title{
+        font-family: 'Coming Soon', cursive;
+    }
 }

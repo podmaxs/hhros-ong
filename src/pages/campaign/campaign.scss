@@ -1,3 +1,15 @@
 page-campaign {
+    @import url('https://fonts.googleapis.com/css?family=Abel|Coming+Soon');
 
+    .toolbar-background-md {
+        border-color: #789048;
+        background: #C0D860;
+    }
+    .causasAsociadas, .item-md{
+        background: #F0F0D8;
+        font-family: 'Abel', cursive;
+    }
+    .toolbar-title{
+        font-family: 'Coming Soon', cursive;
+    }
 }
