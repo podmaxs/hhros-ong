@@ -7,73 +7,22 @@
 <ion-content padding>
 	<ion-grid>
 		<ion-row>
-			<ion-col col-lg-4 col-md-6 col-sm>
+			<ion-col col-lg-4 col-md-6 col-sm *ngFor="let campaign of campaigns" (click)="campaignDetail(campaign)">
 				<ion-card>
-					<img src="http://lorempixel.com/400/200/?v=1"/>
+					<img [src]="campaign.image"/>
 					<ion-card-header>
-						Título de la campaña
+						{{ campaign.title }}
 					</ion-card-header>
 					<ion-card-content>
-						Detalle de la campaña
-					</ion-card-content>
-				</ion-card>
-			</ion-col>
-			<ion-col col-lg-4 col-md-6 col-sm>
-				<ion-card>
-					<img src="http://lorempixel.com/400/200/?v=2"/>
-					<ion-card-header>
-						Título de la campaña
-					</ion-card-header>
-					<ion-card-content>
-						Detalle de la campaña
-					</ion-card-content>
-				</ion-card>
-			</ion-col>
-			<ion-col col-lg-4 col-md-6 col-sm>
-				<ion-card>
-					<img src="http://lorempixel.com/400/200/?v=3"/>
-					<ion-card-header>
-						Título de la campaña
-					</ion-card-header>
-					<ion-card-content>
-						Detalle de la campaña
-					</ion-card-content>
-				</ion-card>
-			</ion-col>
-			<ion-col col-lg-4 col-md-6 col-sm>
-				<ion-card>
-					<img src="http://lorempixel.com/400/200/?v=4"/>
-					<ion-card-header>
-						Título de la campaña
-					</ion-card-header>
-					<ion-card-content>
-						Detalle de la campaña
-					</ion-card-content>
-				</ion-card>
-			</ion-col>
-			<ion-col col-lg-4 col-md-6 col-sm>
-				<ion-card>
-					<img src="http://lorempixel.com/400/200/?v=5"/>
-					<ion-card-header>
-						Título de la campaña
-					</ion-card-header>
-					<ion-card-content>
-						Detalle de la campaña
-					</ion-card-content>
-				</ion-card>
-			</ion-col>
-			<ion-col col-lg-4 col-md-6 col-sm>
-				<ion-card>
-					<img src="http://lorempixel.com/400/200/?v=6"/>
-					<ion-card-header>
-						Título de la campaña
-					</ion-card-header>
-					<ion-card-content>
-						Detalle de la campaña
+						{{ campaign.detail }}
 					</ion-card-content>
 				</ion-card>
 			</ion-col>
 		</ion-row>
 	</ion-grid>
+
+	 <ion-fab right bottom>
+		<button ion-fab (click)="campaignAdd()"><ion-icon name="add"></ion-icon></button>
+	</ion-fab>
 	
 </ion-content>
