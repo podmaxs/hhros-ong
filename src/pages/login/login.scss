@@ -1,0 +1,10 @@
+page-login {
+	ion-content{
+		background:      url('../assets/brand/bg.jpg') 50% 50% no-repeat;
+		background-size: cover;
+
+		& .scroll-content{
+			padding-top: 20vh !important;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+form {
+	& ion-row{		
+		align-items:     center !important;
+		justify-content: center !important;
+		& ion-card{
+			background-color: transparent !important;
+			box-shadow: none !important;
+			& ion-card-header{
+				color: color($colors,primary) !important;
+				font-size: 3rem;
+				font-weight: 200;
+			}
+			& ion-card-content{
+				& ion-item{
+					background-color: rgba(color($colors,primary),.1) !important;
+				}
+				& span.action{
+					color: color($colors,dark) !important;
+					border-bottom: 1px solid !important;
+				}
+			}
+		}
+	}
+}	
