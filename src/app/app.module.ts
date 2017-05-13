@@ -10,12 +10,16 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CampaignPage } from "../pages/campaign/campaign";
+import { CampaignAddPage } from "../pages/campaign-add/campaign-add";
 
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
+    CampaignPage,
+    CampaignAddPage,
     HomePage,
     TabsPage
   ],
@@ -28,6 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     AboutPage,
     ContactPage,
+    CampaignPage,
+    CampaignAddPage,
     HomePage,
     TabsPage
   ],
