@@ -16,7 +16,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 
   //Pages
-  import { Login}       from '../pages/login/login';
+  // import { Login}       from '../pages/login/login';
 
 
   //Components
@@ -34,7 +34,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
     CampaignPage,
     CampaignAddPage,
     HomePage,
-    Login,
+    // Login,
     Form
   ],
   imports: [
@@ -51,7 +51,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
     CampaignPage,
     CampaignAddPage,
     HomePage,
-    Login
+    // Login
   ],
   providers: [
     StatusBar,
