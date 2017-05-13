@@ -1,18 +1,31 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
+import { MyApp }          from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
+import { AboutPage }      from '../pages/about/about';
+import { ContactPage }    from '../pages/contact/contact';
+import { HomePage }       from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CampaignPage } from "../pages/campaign/campaign";
 import { CampaignAddPage } from "../pages/campaign-add/campaign-add";
 
+import { HttpModule, JsonpModule } from '@angular/http';
+
+
+  //Pages
+  import { Login}       from '../pages/login/login';
+
+
+  //Components
+  import { Form } from '../components/form/form';
+
+
+  //Providers
+  import { Api }  from '../providers/api';
+  
 @NgModule({
   declarations: [
     MyApp,
@@ -21,9 +34,12 @@ import { CampaignAddPage } from "../pages/campaign-add/campaign-add";
     CampaignPage,
     CampaignAddPage,
     HomePage,
-    TabsPage
+    Login,
+    Form
   ],
   imports: [
+    HttpModule,
+    JsonpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -35,11 +51,12 @@ import { CampaignAddPage } from "../pages/campaign-add/campaign-add";
     CampaignPage,
     CampaignAddPage,
     HomePage,
-    TabsPage
+    Login
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Api,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
