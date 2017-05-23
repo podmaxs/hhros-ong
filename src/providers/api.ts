@@ -15,7 +15,7 @@ export class Api {
         let h                   = new Headers(headers);
         let options             = new RequestOptions({ 'headers': h });
   			this.http[method](this.serve+path,body,options)
-  			.map((resp) => {return resp.json;})
+  			.map((resp) => {return resp.json();})
   			.subscribe(
   				resp => {
   					resolve(resp);
